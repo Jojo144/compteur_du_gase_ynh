@@ -49,6 +49,8 @@ ynh_script_progression "Building app..."
 
 _venv_install
 
+chown -R "$app:$app" "$data_dir"
+
 pushd "$install_dir/sources"
     ynh_exec_as_app "$venvpy" -m pip install gunicorn
     ynh_exec_as_app "$venvpy" -m pip install -r "requirements.txt" -r "requirements-yunohost.txt"
