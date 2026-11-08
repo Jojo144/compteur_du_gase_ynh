@@ -33,7 +33,7 @@ fi
 # Move sources to subdir
 if [ ! -d "$install_dir/sources" ]; then
     mkdir "$install_dir/sources"
-    find . -mindepth 1 -maxdepth 1 ! -name "sources" -exec mv -t "$install_dir/sources" "{}" +
+    find "$install_dir" -mindepth 1 -maxdepth 1 ! -name "sources" ! -name "venv" ! -name "static" -exec mv -t "$install_dir/sources" "{}" +
 fi
 
 # Move database out of sources dir (avoid to overwrite it on upgrade…)
