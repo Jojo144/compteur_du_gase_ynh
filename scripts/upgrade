@@ -69,6 +69,7 @@ pushd "$install_dir/sources"
     ynh_exec_as_app "$venvpy" -m pip install gunicorn
     ynh_exec_as_app "$venvpy" -m pip install -r requirements.txt -r requirements-yunohost.txt
     ynh_exec_as_app "$venvpy" manage.py migrate --noinput
+    ynh_exec_as_app "$venvpy" manage.py collectstatic --noinput
 popd
 
 chmod -R o-rwx "$install_dir"
