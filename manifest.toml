@@ -68,7 +68,6 @@ ram.runtime = "50M"
     [resources.permissions]
     home_page.url = "re:/$"
     home_page.additional_urls = ["/activité", "/static", "/ynh_auth"]
-    home_page.allowed = "visitors"
     home_page.show_tile = false
 
     main.url = "/"
