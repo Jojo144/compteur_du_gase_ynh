@@ -10,9 +10,9 @@ STATIC_ROOT = '__INSTALL_DIR__/static'
 
 ADMINS = [('Admin du Compteur', '__ADMIN_MAIL__')]
 
-PATH = '__CDGPATH__'
+PATH = '__PATH__/'[1:]
 
-STATIC_URL = '/__CDGPATH__static/'
+STATIC_URL = '__PATH__/static/'
 
 YUNOHOST_APP_ID = '__APP__'
 
