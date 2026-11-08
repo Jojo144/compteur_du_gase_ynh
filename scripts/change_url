@@ -24,12 +24,6 @@ ynh_config_change_url_nginx
 #=================================================
 ynh_script_progression "Updating $app's configuration file..."
 
-if [ "$path" = "/" ]; then
-    cdgpath=""
-else
-    cdgpath="${path:1}/"
-fi
-
 ynh_config_add --template="settings_local.py.example" --destination="$install_dir/sources/compteur/settings_local.py"
 ynh_config_add --template="gunicorn_config.py" --destination="$install_dir/sources/gunicorn_config.py"
 

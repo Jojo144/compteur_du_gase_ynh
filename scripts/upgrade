@@ -52,12 +52,6 @@ ynh_setup_source --dest_dir="$install_dir/sources" --full_replace --keep="compte
 #=================================================
 ynh_script_progression "Adding $app's configuration..."
 
-if [ "$path" = "/" ]; then
-    cdgpath=""
-else
-    cdgpath="${path:1}/"
-fi
-
 ynh_config_add --template="settings_local.py.example" --destination="$install_dir/sources/compteur/settings_local.py"
 ynh_config_add --template="gunicorn_config.py" --destination="$install_dir/sources/gunicorn_config.py"
 
