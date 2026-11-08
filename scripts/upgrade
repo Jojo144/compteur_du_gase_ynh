@@ -25,11 +25,6 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 ynh_script_progression "Ensuring downward compatibility..."
 
-# MIGRATION : Enable django auth module
-if ! grep -q 'YNH_INTEGRATION_ENABLED = True' "$install_dir/sources/compteur/settings_local.py"; then
-    echo 'YNH_INTEGRATION_ENABLED = True' >> "$install_dir/sources/compteur/settings_local.py"
-fi
-
 # Move sources to subdir
 if [ ! -d "$install_dir/sources" ]; then
     mkdir "$install_dir/sources"
