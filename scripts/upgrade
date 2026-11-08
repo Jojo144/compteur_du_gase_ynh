@@ -36,6 +36,9 @@ if [ -f $install_dir/sources/db.sqlite3 ]; then
     mv $install_dir/sources/db.sqlite3 $data_dir/db.sqlite3
 fi
 
+chown -R "$app:$app" "$data_dir"
+chmod -R u+rwX,o-rwx "$data_dir"
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
