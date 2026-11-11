@@ -53,8 +53,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/Jojo144/compteur_du_gase/archive/b7b7351d1968f8fbf8440bf28f51456088a4bb1a.tar.gz"
-    sha256 = "e5993571fc081f59393791ff276fd7ff5146204934baa340d18ab594ff63112a"
+    url = "https://github.com/Jojo144/compteur_du_gase/archive/a64aac61e96e40e6454a73e51374bb376321af5c.tar.gz"
+    sha256 = "0e1cdb7b997133ab9564181729f76caa8719b00078e7a9ffb7c4e0ccb75912ea"
 
     autoupdate.strategy = "latest_github_commit"
 
