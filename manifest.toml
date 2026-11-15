@@ -39,6 +39,8 @@ ram.runtime = "50M"
     [install.init_main_permission]
     type = "group"
     default = "visitors"
+    ask.en = "Who should have access the software?"
+    ask.fr = "Qui doit pouvoir accéder au logiciel ?"
 
     [install.init_home_page_permission]
     type = "group"
@@ -47,6 +49,12 @@ ram.runtime = "50M"
     help.en = "Setting this to « visitors » and main permission to a restricted group allows anonymous users to view only the home page with next permanences. Phone/emails will be hidden from anonymous users."
     ask.fr = "Qui doit pouvoir accéder à la page d'accueil ?"
     help.fr = "Répondre « visitors » et être plus restrictif pour la permission d'accès principale permet de ne donner un accès public qu'à la page d'accueil, qui contient la liste des permanences.  Les emails et téléphones seront dans tous les cas masqués pour les utilisateurs anonymes."
+
+    [install.init_admin_permission]
+    type = "group"
+    default = "admins"
+    ask.en = "Who should have access the admin panel of the software?"
+    ask.fr = "Qui doit pouvoir accéder à l'interface d'administration du logiciel ?"
 
     [install.admin]
     type = "user"
@@ -68,6 +76,7 @@ ram.runtime = "50M"
     [resources.permissions]
     home_page.url = "re:/$"
     home_page.additional_urls = ["/activité", "/static", "/ynh_auth"]
+    home_page.label = "Page d'accueil du compteur (tableau des perms)"
     home_page.show_tile = false
 
     main.url = "/"
@@ -76,9 +85,7 @@ ram.runtime = "50M"
 
     admin.url = "/admin"
     admin.label = "Panneau d'administration"
-    admin.allowed = "admins"
     admin.show_tile = false
-    admin.protected = true
 
     [resources.apt]
     packages = [
